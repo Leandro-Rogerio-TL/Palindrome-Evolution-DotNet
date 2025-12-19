@@ -13,7 +13,11 @@ namespace PalindromeBenchmark
     public class PalindromeComparativo
     {
         // Uma string longa e complexa para estressar o algoritmo
-        private const string Data = "a_b_c_d_e_f_g_h_i_j_k_l_m_n_o_p_q_r_s_t_u_v_w_x_y_z_0_1_2_3_4_5_6_7_8_9_SOCORRAMMESUBINOONIBUSEMMARROCOS_9_8_7_6_5_4_3_2_1_0_z_y_x_w_v_u_t_s_r_q_p_o_n_m_l_k_j_i_h_g_f_e_d_c_b_a";
+        private const string Data = "abcdef1234567890zyxwvutsrqpmlkjihgfedcba" + 
+                                "anavalvalentinamanunaluana" + // Ruído com padrões próximos
+                                "socorrammesubinoonibusemmarrocos" + // O palíndromo clássico (limpo)
+                                "0987654321fedcbaxxxxxxxxxxxxxxxxxxxxxxxx" + // Ruído para forçar busca
+                                "finalteste0123456789";
 
         // Instância da classe antiga
         private readonly SolucaoAntiga _solucaoAntiga = new SolucaoAntiga();
